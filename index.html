@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravin Kanotara - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Developer Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&family=Fira+Code:wght@300..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Matrix Background -->
+    <div id="matrix-bg"></div>
+    
+    <!-- Cursor Trail -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="brand-bracket">&lt;</span>
+                    <span class="brand-name">PK</span>
+                    <span class="brand-bracket">/&gt;</span>
+                </div>
+                <div class="brand-pulse"></div>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        <span class="nav-text">home</span>
+                        <span class="nav-line"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <span class="nav-text">about</span>
+                        <span class="nav-line"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">
+                        <span class="nav-text">skills</span>
+                        <span class="nav-line"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">
+                        <span class="nav-text">projects</span>
+                        <span class="nav-line"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">
+                        <span class="nav-text">experience</span>
+                        <span class="nav-line"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <span class="nav-text">contact</span>
+                        <span class="nav-line"></span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="theme-switcher" id="theme-switcher">
+                    <div class="switch-track">
+                        <div class="switch-thumb">
+                            <i class="fas fa-sun sun-icon"></i>
+                            <i class="fas fa-moon moon-icon"></i>
+                        </div>
+                    </div>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="grid-pattern"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-intro">
+                    <span class="glitch-text">Hello, World!</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </span>
+                </h1>
+                
+                <div class="hero-subtitle">
+                    <div class="subtitle-container">
+                        <span class="comment">// Full-Stack Developer & UI/UX Enthusiast</span>
+                        <span class="code-highlight">const developer = new Pravin();</span>
+                    </div>
+                </div>
+                
+                <p class="hero-description">
+                    Crafting digital experiences with clean code and innovative design. 
+                    Passionate about building scalable web applications and exploring cutting-edge technologies.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#projects" class="cta-btn primary">
+                        <span class="btn-text">View Projects</span>
+                        <span class="btn-bg"></span>
+                        <div class="btn-particles"></div>
+                    </a>
+                    <a href="#contact" class="cta-btn secondary">
+                        <span class="btn-text">Get In Touch</span>
+                        <span class="btn-bg"></span>
+                    </a>
+                </div>
+                
+                <div class="hero-socials">
+                    <a href="https://github.com/pkanotara" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span class="social-tooltip">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pravin-kanotara" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="social-tooltip">LinkedIn</span>
+                    </a>
+                    <a href="mailto:22bce139@nirmauni.ac.in" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                        <span class="social-tooltip">Email</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="window-title">portfolio.js</div>
+                    </div>
+                    <div class="window-content">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="keyword">class</span> 
+                                <span class="class-name">Developer</span> 
+                                <span class="bracket">{</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent">  </span>
+                                <span class="keyword">constructor</span>
+                                <span class="bracket">()</span> 
+                                <span class="bracket">{</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent">    </span>
+                                <span class="keyword">this</span>
+                                <span class="operator">.</span>
+                                <span class="property">name</span> 
+                                <span class="operator">=</span> 
+                                <span class="string">'Pravin Kanotara'</span>
+                                <span class="semicolon">;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent">    </span>
+                                <span class="keyword">this</span>
+                                <span class="operator">.</span>
+                                <span class="property">skills</span> 
+                                <span class="operator">=</span> 
+                                <span class="bracket">[</span>
+                                <span class="string">'React'</span>
+                                <span class="comma">,</span> 
+                                <span class="string">'Node.js'</span>
+                                <span class="bracket">]</span>
+                                <span class="semicolon">;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent">    </span>
+                                <span class="keyword">this</span>
+                                <span class="operator">.</span>
+                                <span class="property">passion</span> 
+                                <span class="operator">=</span> 
+                                <span class="string">'Clean Code'</span>
+                                <span class="semicolon">;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent">  </span>
+                                <span class="bracket">}</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="bracket">}</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="cursor-indicator">▊</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="hero-background">
+            <div class="grid-pattern"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">Who Am I?</h2>
+                <span class="section-tag">&lt;/about&gt;</span>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                    <p>
+                        Hi, I'm Pravin Kanotara, a passionate Computer Science Engineering student at Nirma University. 
+                        I specialize in full-stack web development with expertise in React.js, Node.js, and modern web technologies. 
+                        I love crafting clean, efficient code and creating user experiences that make a difference. 
+                        When I'm not coding, you'll find me exploring new technologies, participating in hackathons, or working on innovative projects.
+                    </p>
+                </div>
+                
+                <div class="about-photo" data-aos="fade-left" data-aos-delay="400">
+                    <div class="profile-frame">
+                        <img src="files/profile.png" alt="Pravin Kanotara" class="profile-image">
+                        <div class="profile-ring"></div>
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="hero-background">
+            <div class="grid-pattern"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Tech Arsenal</h2>
+                <span class="section-tag">&lt;/skills&gt;</span>
+            </div>
+            
+            <div class="skills-unified" data-aos="fade-up" data-aos-delay="200">
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="react">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <span class="skill-name">React.js</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="javascript">
+                        <div class="skill-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="css">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <span class="skill-name">CSS3</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="html">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <span class="skill-name">HTML5</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="nodejs">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <span class="skill-name">Node.js</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="mongodb">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span class="skill-name">MongoDB</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="sql">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 78%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="java">
+                        <div class="skill-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <span class="skill-name">Java</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 82%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="cpp">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span class="skill-name">C++</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="git">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <span class="skill-name">Git</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="github">
+                        <div class="skill-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <span class="skill-name">GitHub</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="figma">
+                        <div class="skill-icon">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <span class="skill-name">Figma</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="aws">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <span class="skill-name">AWS</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="--level: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="hero-background">
+            <div class="grid-pattern"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured Work</h2>
+                <span class="section-tag">&lt;/projects&gt;</span>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-type">Web Application</div>
+                        <div class="project-links">
+                            <a href="https://github.com/pkanotara/Food-delivery" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Food Delivery Platform</h3>
+                        <p class="project-description">
+                            A comprehensive food delivery web application built with React.js and Tailwind CSS. 
+                            Features include real-time order tracking, payment integration, and responsive design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-type">Web Application</div>
+                        <div class="project-links">
+                            <a href="https://github.com/pkanotara/SplitWise-Pro" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SplitWise Pro</h3>
+                        <p class="project-description">
+                            Smart bill splitting application with intelligent settlement algorithms and real-time expense tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-header">
+                        <div class="project-type">Algorithm Solutions</div>
+                        <div class="project-links">
+                            <a href="https://github.com/pkanotara/LeetCode" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LeetCode Solutions</h3>
+                        <p class="project-description">
+                            Comprehensive collection of optimized data structure and algorithm solutions with detailed explanations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-header">
+                        <div class="project-type">Visualization Tool</div>
+                        <div class="project-links">
+                            <a href="https://github.com/pkanotara/graph_builder" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Graph Builder</h3>
+                        <p class="project-description">
+                            Interactive graph visualization tool for creating and manipulating complex graph structures.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Canvas API</span>
+                            <span class="tech-tag">Graph Theory</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-header">
+                        <div class="project-type">IoT Project</div>
+                        <div class="project-links">
+                            <a href="https://github.com/pkanotara/Agribot" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Agribot</h3>
+                        <p class="project-description">
+                            Agricultural automation system for smart farming with IoT sensors and machine learning integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-header">
+                        <div class="project-type">Web Application</div>
+                        <div class="project-links">
+                            <a href="https://github.com/pkanotara/Typeflow" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Typeflow</h3>
+                        <p class="project-description">
+                            Modern typing practice application with real-time analytics and customizable practice modes.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="hero-background">
+            <div class="grid-pattern"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-2"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Career Journey</h2>
+                <span class="section-tag">&lt;/experience&gt;</span>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <div class="marker-outer">
+                            <div class="marker-inner"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <h3 class="exp-title">Frontend Web Developer</h3>
+                                <span class="exp-duration">May 2025 - Jun 2025</span>
+                            </div>
+                            <h4 class="exp-company">Su-kEm Tech Lab</h4>
+                            <ul class="exp-points">
+                                <li>Developed responsive frontend for Madang Food Delivery Platform using React.js</li>
+                                <li>Implemented dynamic UI components with Tailwind CSS and modern design patterns</li>
+                                <li>Integrated RESTful APIs for seamless data flow and real-time updates</li>
+                                <li>Collaborated with backend team using Git workflows and agile methodologies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievements-section" data-aos="fade-up" data-aos-delay="300">
+                    <div class="section-header">
+                        <span class="section-tag">&lt;achievements&gt;</span>
+                        <h3 class="achievements-title">Achievements & Certifications</h3>
+                        <span class="section-tag">&lt;/achievements&gt;</span>
+                    </div>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Microsoft Learn Workshop</h4>
+                                <p>Web Development certification</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Smart India Hackathon</h4>
+                                <p>SIH 2023 & 2024 Participant</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Tata Imagination Challenge</h4>
+                                <p>Innovation Challenge Participant</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>MINED Hackathon</h4>
+                                <p>AI Solutions Track</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>AWS Academy Graduate</h4>
+                                <p>Cloud Foundations Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="hero-background">
+            <div class="grid-pattern"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <span class="section-tag">&lt;/contact&gt;</span>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="info-header">
+                        <h3>Ready to collaborate?</h3>
+                        <p>I'm always excited to work on innovative projects and connect with fellow developers.</p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>22bce139@nirmauni.ac.in</p>
+                                <p>prvnkanotara@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Phone</h4>
+                                <p>+91-6351927357</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Location</h4>
+                                <p>Ahmedabad, Gujarat, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/pkanotara" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pravin-kanotara" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left" data-aos-delay="400">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-header">
+                            <h3>Send Message</h3>
+                            <div class="form-decoration">
+                                <span class="decorator"></span>
+                                <span class="decorator"></span>
+                                <span class="decorator"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <div class="input-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="input-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-effect"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <span class="brand-bracket">&lt;</span>
+                        <span class="brand-name">PK</span>
+                        <span class="brand-bracket">/&gt;</span>
+                    </div>
+                    <p>Full-Stack Developer</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="nav-column">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                    <div class="nav-column">
+                        <a href="#experience">Experience</a>
+                        <a href="#contact">Contact</a>
+                        <a href="https://github.com/pkanotara" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/pravin-kanotara" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <a href="mailto:22bce139@nirmauni.ac.in">22bce139@nirmauni.ac.in</a>
+                    <span>&copy; 2024 Pravin Kanotara</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
