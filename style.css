@@ -1859,7 +1859,25 @@ section {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+
+/* Laptop (992px - 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        padding: 0 var(--space-lg);
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .profile-frame {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
     .hero-container {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
@@ -1872,17 +1890,18 @@ section {
         text-align: center;
     }
     
-    .experience-timeline {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-    }
-    
     .contact-content {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
     
-
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+    .achievements-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
     
     .footer-content {
         grid-template-columns: 1fr 1fr;
@@ -1890,7 +1909,88 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--space-2xl) var(--space-xl);
+        gap: var(--space-xl);
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+        z-index: 9999;
+        overflow-y: auto;
+    }
+    
+    [data-theme="light"] .nav-menu {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+    
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: var(--space-lg) 0;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid var(--border-primary);
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero {
+        padding-top: 120px;
+    }
+    
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .cta-btn {
+        padding: var(--space-md) var(--space-lg);
+        font-size: 0.9rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        height: auto;
+        min-height: 320px;
+    }
+    
+    .profile-frame {
+        width: 240px;
+        height: 240px;
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
@@ -1907,39 +2007,44 @@ section {
     }
 }
 
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--bg-secondary);
-        border-top: 1px solid var(--border-primary);
-        flex-direction: column;
-        padding: var(--space-xl);
-        transform: translateY(-100%);
-        transition: transform var(--transition-normal);
-        z-index: var(--z-dropdown);
+/* Mobile Small (320px - 575px) */
+@media (max-width: 575px) {
+    .hero-title {
+        font-size: 1.8rem;
     }
     
-    .nav-menu.active {
-        transform: translateY(0);
+    .section-title {
+        font-size: 1.8rem;
     }
     
-    .hamburger {
-        display: flex;
-    }
-    
-    .hero {
-        padding-top: 120px;
-    }
-    
-    .container {
-        padding: 0 var(--space-lg);
-    }
-    
-    .cta-btn {
+    .nav-container {
         padding: var(--space-md) var(--space-lg);
-        font-size: 0.9rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: var(--space-md);
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-frame {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .footer-nav {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .hero-socials {
+        justify-content: center;
+    }
+    
+    .contact-info {
+        position: static;
     }
 }   
