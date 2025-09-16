@@ -211,9 +211,16 @@ function toggleMobileMenu() {
     
     // Prevent body scroll when menu is open
     if (navMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
+        const scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = '100%';
     } else {
-        document.body.style.overflow = '';
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 }
 
@@ -228,7 +235,11 @@ function handleNavLinkClick(e) {
         if (hamburger && navMenu) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }
         
         // Smooth scroll to section
@@ -250,7 +261,11 @@ function handleOutsideClick(e) {
     if (!navbar.contains(e.target) && navMenu.classList.contains('active')) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
-        document.body.style.overflow = '';
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 }
 
@@ -1544,10 +1559,14 @@ function optimizeScrollEvents() {
 function optimizeResizeEvents() {
     window.addEventListener('resize', debounce(() => {
         // Handle responsive adjustments
-        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+        if (window.innerWidth > 767 && navMenu.classList.contains('active')) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }
     }, 250));
 }
